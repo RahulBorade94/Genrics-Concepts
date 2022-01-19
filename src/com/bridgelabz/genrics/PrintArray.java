@@ -2,24 +2,20 @@ package com.bridgelabz.genrics;
 
 public class PrintArray {
 
-    public static <E> void toPrint (E [] inputArray){
-        for (E element: inputArray) {
-            System.out.printf("%s", element);
-
+    public static Integer compareTo(Integer x,Integer y,Integer z){
+        Integer max=x;
+        if (y.compareTo(max)> 0){
+            max=y;
         }
-        System.out.println();
+        if (z.compareTo(max)> 0){
+            max=z;
+        }
+              return max;
 
     }
 
-
     public static void main(String[] args) {
-        Integer [] intArray = {1,2,3,4,5};
-        Double [] doubleArray = {1.1,2.2,3.3,4.4,5.5};
-        Character [] charArray = {'M','G','M','G','Y'};
-        PrintArray.toPrint(intArray);
-        PrintArray.toPrint(doubleArray);
-        PrintArray.toPrint(charArray);
-
+        System.out.println("Maximum from 3 Integer Object : "+compareTo(30,100,56));
 
     }
 
